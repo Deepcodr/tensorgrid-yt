@@ -1,0 +1,183 @@
+{
+ "id": "circuit-breaker",
+ "title": "Circuit Breaker in Microservices",
+ "voice": "af_heart",
+ "speed": 1.06,
+ "keywords": {
+  "red": [
+   "down",
+   "failing",
+   "retrying",
+   "timeout",
+   "cascades",
+   "cascading",
+   "fail",
+   "exhausted",
+   "retries",
+   "failure",
+   "out",
+   "instantly",
+   "open",
+   "opens"
+  ],
+  "green": [
+   "closed",
+   "closes",
+   "succeed",
+   "flowing",
+   "stable",
+   "fast",
+   "normally"
+  ],
+  "amber": [
+   "half-open",
+   "trial",
+   "pending",
+   "retry",
+   "wait",
+   "fallback",
+   "threshold",
+   "fifty",
+   "percent",
+   "back"
+  ],
+  "cyan": [
+   "breaker",
+   "thread",
+   "threads",
+   "states",
+   "bank",
+   "bank's",
+   "payments",
+   "checkout",
+   "upstream",
+   "caller",
+   "service"
+  ]
+ },
+ "music": {
+  "tension": [
+   "problem"
+  ],
+  "solutionFrom": "definition",
+  "lift": "summary"
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "lines": [
+    "One microservice just went down.",
+    {
+     "text": "So why are ten others failing?",
+     "pause": 0.25
+    }
+   ]
+  },
+  {
+   "id": "problem",
+   "lines": [
+    "A downstream service stops responding.",
+    "But the caller keeps calling, and retrying.",
+    "Every call holds a thread, waiting on a timeout.",
+    "The threads run out, and the failure cascades upstream."
+   ],
+   "label": "THE PROBLEM",
+   "captions": true
+  },
+  {
+   "id": "definition",
+   "lines": [
+    "The fix is a circuit breaker.",
+    "It wraps the call and watches for failures.",
+    "Too many, and it stops calling the failing service, giving it time to recover."
+   ],
+   "label": "THE FIX"
+  },
+  {
+   "id": "how",
+   "lines": [
+    {
+     "text": "It has three states.",
+     "pause": 0.15
+    },
+    "Closed: requests flow normally, while the breaker tracks the failure rate.",
+    {
+     "text": "Cross the threshold, say fifty percent, and it trips open.",
+     "pause": 0.35
+    },
+    "Now calls fail instantly, without ever touching the service.",
+    {
+     "text": "After a wait period, it goes half-open, and lets a few trial requests through.",
+     "pause": 0.45
+    },
+    {
+     "text": "If they succeed, it closes.",
+     "pause": 0.25
+    },
+    "If they fail, it opens again."
+   ],
+   "label": "HOW IT WORKS",
+   "captions": true
+  },
+  {
+   "id": "example",
+   "lines": [
+    "Picture a checkout.",
+    "The order service calls payments, and payments calls the bank.",
+    "Then the bank's API goes down.",
+    {
+     "text": "The breaker opens, and payments returns a fallback: payment pending, we'll retry.",
+     "pause": 0.35
+    },
+    "Orders keep flowing."
+   ],
+   "label": "IN PRODUCTION",
+   "captions": true
+  },
+  {
+   "id": "compare",
+   "lines": [
+    "Without it: retries, exhausted threads, and a cascading failure.",
+    "With it: requests fail fast, fall back, and the system stays stable."
+   ],
+   "label": "BEFORE vs AFTER",
+   "captions": true
+  },
+  {
+   "id": "takeaways",
+   "lines": [
+    "For interviews, remember three things.",
+    "One. It stops cascading failures.",
+    "Two: closed, open, half-open.",
+    "Three: pair it with timeouts and a fallback."
+   ],
+   "label": "INTERVIEW NOTES"
+  },
+  {
+   "id": "summary",
+   "lines": [
+    {
+     "text": "A circuit breaker stops calling what's broken, so everything else keeps working.",
+     "pause": 0.35
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "lines": [
+    "Follow for more system design, explained visually.",
+    "And save this for your next interview."
+   ]
+  }
+ ],
+ "youtube": {
+  "title": "Circuit Breaker Pattern Explained Visually #systemdesign #microservices",
+  "tags": [
+   "circuit breaker",
+   "system design",
+   "microservices",
+   "resilience4j",
+   "backend"
+  ]
+ }
+}

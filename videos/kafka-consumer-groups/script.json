@@ -1,0 +1,160 @@
+{
+ "id": "kafka-consumer-groups",
+ "title": "Consumer Groups in Kafka",
+ "voice": "af_heart",
+ "speed": 1.06,
+ "keywords": {
+  "red": [
+   "lag",
+   "growing",
+   "twice",
+   "same",
+   "crashes",
+   "duplicate"
+  ],
+  "green": [
+   "parallel",
+   "exactly",
+   "resume",
+   "survivors"
+  ],
+  "amber": [
+   "rebalances",
+   "rebalance",
+   "idle",
+   "offset",
+   "offsets",
+   "queue"
+  ],
+  "cyan": [
+   "partitions",
+   "partition",
+   "group",
+   "consumer",
+   "consumers",
+   "topic",
+   "log",
+   "pub-sub",
+   "email"
+  ]
+ },
+ "music": {
+  "tension": [
+   "problem"
+  ],
+  "solutionFrom": "definition",
+  "lift": "summary"
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "lines": [
+    "How can multiple consumers process one Kafka topic in parallel,",
+    {
+     "text": "without reading the same message twice?",
+     "pause": 0.2
+    }
+   ]
+  },
+  {
+   "id": "problem",
+   "label": "THE PROBLEM",
+   "captions": true,
+   "lines": [
+    "One consumer reads every order, one by one.",
+    "Traffic spikes, and the lag keeps growing.",
+    "Add more consumers? They'd all read the same messages."
+   ]
+  },
+  {
+   "id": "definition",
+   "label": "THE FIX",
+   "lines": [
+    "Kafka's answer is a consumer group.",
+    "Consumers that share a group ID split the partitions,",
+    "and each partition gets exactly one consumer."
+   ]
+  },
+  {
+   "id": "how",
+   "label": "HOW IT WORKS",
+   "captions": true,
+   "lines": [
+    "A topic is split into partitions, each an ordered log.",
+    "Four partitions, two consumers: each takes two.",
+    {
+     "text": "Add a third, and Kafka rebalances.",
+     "pause": 0.2
+    },
+    "A fifth consumer, with only four partitions, sits idle.",
+    "Each consumer commits an offset, so it knows where to resume.",
+    {
+     "text": "If one crashes, its partitions move to the survivors.",
+     "pause": 0.3
+    }
+   ]
+  },
+  {
+   "id": "example",
+   "label": "IN PRODUCTION",
+   "captions": true,
+   "lines": [
+    "Now add a second group, for email notifications.",
+    "It gets every message too, with its own offsets.",
+    {
+     "text": "Inside a group, it's a queue. Across groups, it's pub-sub.",
+     "pause": 0.2
+    }
+   ]
+  },
+  {
+   "id": "compare",
+   "label": "BEFORE vs AFTER",
+   "captions": true,
+   "lines": [
+    "Without groups: lag, or duplicate work.",
+    "With them: parallel, no duplicates, and automatic failover."
+   ]
+  },
+  {
+   "id": "takeaways",
+   "label": "INTERVIEW NOTES",
+   "lines": [
+    "Remember three things.",
+    "One. Parallelism is capped by the partition count.",
+    "Two. Order is only guaranteed within a partition.",
+    "Three. Joins and crashes trigger a rebalance."
+   ]
+  },
+  {
+   "id": "summary",
+   "lines": [
+    {
+     "text": "Consumer groups split the partitions, one owner each, so one topic is processed in parallel.",
+     "pause": 0.3
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "lines": [
+    "Follow for more system design, explained visually.",
+    "And save this for your next interview."
+   ]
+  }
+ ],
+ "youtube": {
+  "title": "Kafka Consumer Groups Explained Visually #kafka #systemdesign",
+  "description": "How do multiple consumers read one Kafka topic in parallel without processing the same message twice? Consumer groups split a topic's partitions so each partition has exactly one owner.\n\nInside:\n- Why one consumer falls behind (and why naive scaling duplicates work)\n- Partitions, assignment and rebalancing, step by step\n- Idle consumers, offsets and failover\n- Two groups on one topic: queue vs pub-sub\n- 3 interview takeaways\n\nFollow for more system design, explained visually.\n\nNarration is AI-generated.\n#kafka #systemdesign #backend #distributedsystems #interviewprep",
+  "tags": [
+   "kafka",
+   "consumer groups",
+   "apache kafka",
+   "system design",
+   "event driven architecture",
+   "backend",
+   "distributed systems",
+   "interview prep"
+  ]
+ }
+}

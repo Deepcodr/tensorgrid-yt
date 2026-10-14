@@ -1,0 +1,23 @@
+{
+ "schedule": {
+  "days": [1, 4, 7, 10, 13, 16, 19, 22, 25, 28],
+  "time": "19:00",
+  "timezone": "Asia/Calcutta",
+  "utcOffset": "+05:30",
+  "metricoolBlogId": "7238339",
+  "platforms": ["youtube"],
+  "review": "3-day veto: each video is scheduled public in Metricool well ahead of time; the owner can delete the post in Metricool to cancel it."
+ },
+ "topics": [
+  {"id": "circuit-breaker", "title": "Circuit Breaker in Microservices", "category": "system-design", "hook": "Your microservice just went down... so why are 10 other services failing?", "status": "scheduled", "publishAt": "2026-11-01T19:00:00+05:30", "metricoolPostId": 396156113, "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7238339&openWithPostUuid=-2476018368989542852"},
+  {"id": "kafka-consumer-groups", "title": "Consumer Groups in Kafka", "category": "system-design", "hook": "How can multiple consumers process messages in parallel?", "notes": "Animate a topic splitting into partitions and consumers processing them concurrently.", "status": "rendering"},
+  {"id": "saga-pattern", "title": "Saga Pattern", "category": "system-design", "hook": "How do you undo a transaction across multiple services?", "notes": "Illustrate an order, payment, and inventory workflow with a compensating transaction.", "status": "queued"},
+  {"id": "sigmoid-function", "title": "Sigmoid Function", "category": "ml", "hook": "How does a neural network turn a number into a probability?", "notes": "Animate the S-shaped curve mapping any real input to a value between 0 and 1.", "status": "queued"},
+  {"id": "gradient-descent", "title": "Gradient Descent", "category": "ml", "hook": "How does AI learn from its mistakes?", "notes": "Show a point moving downhill on a loss curve toward a lower-error solution.", "status": "queued"},
+  {"id": "cap-theorem", "title": "CAP Theorem in Distributed Systems", "category": "system-design", "hook": "Why can't a distributed system guarantee consistency, availability, and partition tolerance all at once?", "status": "queued"},
+  {"id": "overfitting-vs-underfitting", "title": "Overfitting vs Underfitting in Machine Learning", "category": "ml", "hook": "Why can an AI model perform well during training but poorly on new data?", "status": "queued"},
+  {"id": "docker-containers", "title": "Docker Containers Explained", "category": "system-design", "hook": "How can an application run consistently across different machines?", "status": "queued"},
+  {"id": "how-dns-works", "title": "How DNS Works", "category": "system-design", "hook": "How does a domain name get converted into an IP address?", "status": "queued"},
+  {"id": "attention-mechanism", "title": "Attention Mechanism in Transformers", "category": "ml", "hook": "How does an AI model decide which words matter most in a sentence?", "status": "queued"}
+ ]
+}

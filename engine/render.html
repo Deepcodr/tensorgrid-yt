@@ -1,0 +1,8 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+// usage: render.html?v=/abs/path/to/videos/<id>   (loads build/timeline.js, engine core+lib, the video's scenes.js)
+const V = new URLSearchParams(location.search).get('v');
+const load = src => new Promise((res, rej) => { const s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = () => rej(new Error('failed to load ' + src)); document.body.appendChild(s); });
+window.READY = (async () => { for (const f of ['file://' + V + '/build/timeline.js', 'core.js', 'lib.js', 'file://' + V + '/scenes.js']) await load(f); initReel(); await document.fonts.ready; return true; })().catch(e => { window.LOAD_ERROR = String(e.stack || e); throw e; });
+</script></body></html>
