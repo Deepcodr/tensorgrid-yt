@@ -1,0 +1,163 @@
+{
+ "id": "saga-pattern",
+ "title": "Saga Pattern",
+ "voice": "af_heart",
+ "speed": 1.06,
+ "keywords": {
+  "red": [
+   "fails",
+   "charged",
+   "never",
+   "inconsistent",
+   "half-finished"
+  ],
+  "green": [
+   "commits",
+   "refund",
+   "consistent",
+   "undone",
+   "commit"
+  ],
+  "amber": [
+   "backwards",
+   "compensations",
+   "compensation",
+   "cancel",
+   "rollback",
+   "rolls"
+  ],
+  "cyan": [
+   "saga",
+   "sagas",
+   "database",
+   "payment",
+   "inventory",
+   "order",
+   "events",
+   "orchestrator",
+   "choreography",
+   "orchestration",
+   "stock"
+  ]
+ },
+ "music": {
+  "tension": [
+   "hook",
+   "problem"
+  ],
+  "solutionFrom": "definition",
+  "lift": "summary"
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "lines": [
+    "How do you undo a transaction across three services?",
+    {
+     "text": "There is no rollback button.",
+     "pause": 0.2
+    }
+   ]
+  },
+  {
+   "id": "problem",
+   "label": "THE PROBLEM",
+   "captions": true,
+   "lines": [
+    "In a monolith, one transaction covers everything.",
+    "But in microservices, each service owns its own database.",
+    "Payment commits. Then inventory fails.",
+    "The customer is charged for an order that never ships."
+   ]
+  },
+  {
+   "id": "definition",
+   "label": "THE FIX",
+   "lines": [
+    "The fix is the Saga pattern.",
+    "A chain of local transactions, one per service.",
+    "And every step has a compensation that undoes it."
+   ]
+  },
+  {
+   "id": "how",
+   "label": "HOW IT WORKS",
+   "captions": true,
+   "lines": [
+    "Create the order. Commit, and trigger the next step.",
+    "Charge the payment. Commit.",
+    {
+     "text": "Reserve the stock. It fails, out of stock.",
+     "pause": 0.2
+    },
+    "Now the saga runs backwards.",
+    "Refund the payment. Cancel the order.",
+    {
+     "text": "Compensations are new transactions, not a rollback.",
+     "pause": 0.2
+    }
+   ]
+  },
+  {
+   "id": "example",
+   "label": "IN PRODUCTION",
+   "captions": true,
+   "lines": [
+    "Who drives the saga? Two styles.",
+    "Choreography: each service listens for events, and reacts.",
+    "Orchestration: a central orchestrator tells each service what to do.",
+    "Tools like Temporal or Step Functions run the orchestrator."
+   ]
+  },
+  {
+   "id": "compare",
+   "label": "BEFORE vs AFTER",
+   "captions": true,
+   "lines": [
+    "Without sagas: half-finished work, and inconsistent data.",
+    "With sagas: failures are undone, and data ends up consistent."
+   ]
+  },
+  {
+   "id": "takeaways",
+   "label": "INTERVIEW NOTES",
+   "lines": [
+    "Remember three things.",
+    "One. Sagas are eventually consistent, with no isolation.",
+    "Two. Compensations must be idempotent, and safe to retry.",
+    "Three. Choreography for simple flows, orchestration for complex ones."
+   ]
+  },
+  {
+   "id": "summary",
+   "lines": [
+    {
+     "text": "A saga is a chain of local transactions, each with a compensation to undo it.",
+     "pause": 0.3
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "lines": [
+    "Follow for more system design, explained visually.",
+    "And save this for your next interview."
+   ]
+  }
+ ],
+ "youtube": {
+  "title": "Saga Pattern Explained Visually #systemdesign #microservices",
+  "description": "How do you undo a transaction that spans multiple microservices, when each service owns its own database? The Saga pattern: a chain of local transactions, each with a compensating action that undoes it if a later step fails.\n\nInside:\n- Why one ACID transaction can't span services\n- Forward steps and compensations, step by step (order, payment, inventory)\n- Choreography vs orchestration\n- Before vs after\n- 3 interview takeaways: eventual consistency, idempotent compensations, choosing a coordination style\n\nFollow for more system design, explained visually.\n\nNarration is AI-generated.\n#systemdesign #microservices #sagapattern #distributedsystems #interviewprep",
+  "tags": [
+   "saga pattern",
+   "microservices",
+   "system design",
+   "distributed transactions",
+   "compensating transaction",
+   "choreography vs orchestration",
+   "backend",
+   "distributed systems",
+   "interview prep"
+  ]
+ }
+}

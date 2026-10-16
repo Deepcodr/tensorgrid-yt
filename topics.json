@@ -51,7 +51,11 @@
    "category": "system-design",
    "hook": "How do you undo a transaction across multiple services?",
    "notes": "Illustrate an order, payment, and inventory workflow with a compensating transaction.",
-   "status": "queued"
+   "status": "scheduled",
+   "publishAt": "2026-11-07T19:00:00+05:30",
+   "metricoolPostId": 397413832,
+   "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7238339&openWithPostUuid=1606976346744049149",
+   "durationSec": 89.7
   },
   {
    "id": "sigmoid-function",
