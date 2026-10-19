@@ -1,0 +1,192 @@
+{
+ "id": "sigmoid-function",
+ "title": "Sigmoid Function",
+ "voice": "af_heart",
+ "speed": 1.06,
+ "keywords": {
+  "red": [
+   "vanish",
+   "anything",
+   "can't",
+   "saturates"
+  ],
+  "green": [
+   "probability",
+
+   "clean",
+   "spam"
+  ],
+  "amber": [
+   "squash",
+   "threshold",
+   "half",
+   "flattens"
+  ],
+  "cyan": [
+   "logit",
+   "score",
+   "sigmoid",
+   "zero",
+   "slope",
+   "gradients",
+   "features",
+   "curve"
+  ]
+ },
+ "music": {
+  "tension": [
+   "hook",
+   "problem"
+  ],
+  "solutionFrom": "definition",
+  "lift": "summary"
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "lines": [
+    "How does a neural network turn any number into a probability?",
+    {
+     "text": "With one tiny function.",
+     "pause": 0.2
+    }
+   ]
+  },
+  {
+   "id": "problem",
+   "label": "THE PROBLEM",
+   "captions": true,
+   "lines": [
+    "A model's last layer outputs a raw score, called a logit.",
+    {
+     "text": "It can be anything: minus 12, 0, or 42.",
+     "say": "It can be anything. Minus twelve. Zero. Or forty two."
+    },
+    {
+     "text": "But a probability must stay between 0 and 1.",
+     "say": "But a probability must stay between zero and one."
+    },
+    "So how do we squash it?"
+   ]
+  },
+  {
+   "id": "definition",
+   "label": "THE FIX",
+   "lines": [
+    "Meet the sigmoid function.",
+    {
+     "text": "It squashes any real number into a value between 0 and 1.",
+     "say": "It squashes any real number into a value between zero and one."
+    },
+    "Big inputs land near one. Very negative inputs land near zero."
+   ]
+  },
+  {
+   "id": "how",
+   "label": "HOW IT WORKS",
+   "captions": true,
+   "lines": [
+    {
+     "text": "The formula: 1 over 1, plus e to the minus x.",
+     "say": "The formula: one over one, plus e to the minus x."
+    },
+    "At zero, the output is exactly one half.",
+    {
+     "text": "At 2, it is about 0.88.",
+     "say": "At two, it is about zero point eight eight."
+    },
+    {
+     "text": "At minus 2, about 0.12.",
+     "say": "At minus two, about zero point one two."
+    },
+    "Far from zero, the curve flattens out. It saturates.",
+    {
+     "text": "There, the slope is nearly zero, so gradients vanish.",
+     "pause": 0.2
+    }
+   ]
+  },
+  {
+   "id": "example",
+   "label": "IN PRODUCTION",
+   "captions": true,
+   "lines": [
+    "Take a spam filter.",
+    {
+     "text": "It weighs the email's features into one score: 2.5.",
+     "say": "It weighs the email's features into one score: two point five."
+    },
+    {
+     "text": "Sigmoid turns that into a 92 percent chance of spam.",
+     "say": "Sigmoid turns that into a ninety two percent chance of spam."
+    },
+    {
+     "text": "That is above the threshold of 0.5, so it goes to spam.",
+     "say": "That is above the threshold of zero point five, so it goes to spam."
+    }
+   ]
+  },
+  {
+   "id": "compare",
+   "label": "BEFORE vs AFTER",
+   "captions": true,
+   "lines": [
+    "Without sigmoid: raw scores you can't read as probabilities.",
+    "With sigmoid: a clean probability, between zero and one."
+   ]
+  },
+  {
+   "id": "takeaways",
+   "label": "INTERVIEW NOTES",
+   "lines": [
+    "Remember three things.",
+    {
+     "text": "1. Use it for binary outputs, with cross entropy loss.",
+     "say": "One. Use it for binary outputs, with cross entropy loss."
+    },
+    {
+     "text": "2. To pick one of many classes, use softmax instead.",
+     "say": "Two. To pick one of many classes, use softmax instead."
+    },
+    {
+     "text": "3. For hidden layers, prefer re-LU, since sigmoid saturates.",
+     "say": "Three. For hidden layers, prefer ReLU, since sigmoid saturates."
+    }
+   ]
+  },
+  {
+   "id": "summary",
+   "lines": [
+    {
+     "text": "Sigmoid squashes any number into a probability between 0 and 1.",
+     "say": "Sigmoid squashes any number into a probability between zero and one.",
+     "pause": 0.3
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "lines": [
+    "Follow for more AI concepts, explained visually.",
+    "And save this for your next interview."
+   ]
+  }
+ ],
+ "youtube": {
+  "title": "Sigmoid Function Explained Visually #machinelearning #ai",
+  "description": "How does a neural network turn any raw score into a probability? The sigmoid function, 1 / (1 + e^-x), squashes any real number into a value between 0 and 1.\n\nInside:\n- Why logits need squashing\n- The S-curve: sigmoid(0) = 0.5, sigmoid(2) ≈ 0.88, sigmoid(-2) ≈ 0.12\n- Saturation and vanishing gradients\n- A real example: a spam filter turning a score into a 92% spam probability\n- Before vs after\n- 3 interview takeaways: binary cross-entropy, softmax for multi-class, ReLU in hidden layers\n\nFollow for more AI concepts, explained visually.\n\nNarration is AI-generated.\n#machinelearning #deeplearning #ai #neuralnetworks #interviewprep",
+  "tags": [
+   "sigmoid function",
+   "sigmoid",
+   "logistic function",
+   "machine learning",
+   "deep learning",
+   "neural networks",
+   "activation function",
+   "logistic regression",
+   "vanishing gradient",
+   "ai",
+   "interview prep"
+  ]
+ }
+}

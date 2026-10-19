@@ -63,7 +63,11 @@
    "category": "ml",
    "hook": "How does a neural network turn a number into a probability?",
    "notes": "Animate the S-shaped curve mapping any real input to a value between 0 and 1.",
-   "status": "queued"
+   "status": "scheduled",
+   "publishAt": "2026-11-10T19:00:00+05:30",
+   "metricoolPostId": 399632264,
+   "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7238339&openWithPostUuid=4060906649751996048",
+   "durationSec": 90.5
   },
   {
    "id": "gradient-descent",
