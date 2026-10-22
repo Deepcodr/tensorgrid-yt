@@ -75,7 +75,11 @@
    "category": "ml",
    "hook": "How does AI learn from its mistakes?",
    "notes": "Show a point moving downhill on a loss curve toward a lower-error solution.",
-   "status": "queued"
+   "status": "scheduled",
+   "publishAt": "2026-11-13T19:00:00+05:30",
+   "metricoolPostId": 402786857,
+   "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7238339&openWithPostUuid=-5070773839670655915",
+   "durationSec": 85.8
   },
   {
    "id": "cap-theorem",

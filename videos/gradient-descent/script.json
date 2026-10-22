@@ -1,0 +1,171 @@
+{
+ "id": "gradient-descent",
+ "title": "Gradient Descent",
+ "voice": "af_heart",
+ "speed": 1.06,
+ "keywords": {
+  "red": [
+   "wrong",
+   "overshoots",
+   "crawls",
+   "random",
+   "barely"
+  ],
+  "green": [
+   "lowers",
+   "downhill",
+   "falling",
+   "fits",
+   "bottom"
+  ],
+  "amber": [
+   "learning",
+   "rate",
+   "opposite",
+   "step",
+   "steps"
+  ],
+  "cyan": [
+   "weights",
+   "weight",
+   "loss",
+   "gradient",
+   "slope",
+   "valley",
+   "line",
+   "batch"
+  ]
+ },
+ "music": {
+  "tension": [
+   "hook",
+   "problem"
+  ],
+  "solutionFrom": "definition",
+  "lift": "summary"
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "lines": [
+    "How does AI learn from its mistakes?",
+    {
+     "text": "It walks downhill. One small step at a time.",
+     "pause": 0.2
+    }
+   ]
+  },
+  {
+   "id": "problem",
+   "label": "THE PROBLEM",
+   "captions": true,
+   "lines": [
+    "A new model starts with random weights, so its predictions are wrong.",
+    "We measure how wrong with the loss: one number, lower is better.",
+    "But a real model has millions of weights.",
+    "Which way should each one move?"
+   ]
+  },
+  {
+   "id": "definition",
+   "label": "THE FIX",
+   "lines": [
+    "Gradient descent answers that.",
+    "It nudges every weight in the direction that lowers the loss fastest.",
+    "Then it does it again, and again."
+   ]
+  },
+  {
+   "id": "how",
+   "label": "HOW IT WORKS",
+   "captions": true,
+   "lines": [
+    "Picture the loss as a valley.",
+    "The gradient is the slope, and it points uphill.",
+    "So we step the opposite way.",
+    {
+     "text": "New weight equals old weight, minus learning rate times gradient.",
+     "say": "New weight equals old weight, minus learning rate, times gradient."
+    },
+    "Near the bottom the slope flattens, so the steps shrink.",
+    {
+     "text": "A huge learning rate overshoots. A tiny one crawls.",
+     "pause": 0.2
+    }
+   ]
+  },
+  {
+   "id": "example",
+   "label": "IN PRODUCTION",
+   "captions": true,
+   "lines": [
+    "Say we fit a line to predict house prices.",
+    "Each step, we measure the error on a batch of houses.",
+    "The gradient tells us how to tilt the line.",
+    "Step after step, the loss keeps falling, and the line fits the data."
+   ]
+  },
+  {
+   "id": "compare",
+   "label": "BEFORE vs AFTER",
+   "captions": true,
+   "lines": [
+    "Without it: random guesses, and the loss barely moves.",
+    "With it: every step goes downhill, until the loss bottoms out."
+   ]
+  },
+  {
+   "id": "takeaways",
+   "label": "INTERVIEW NOTES",
+   "lines": [
+    "Remember three things.",
+    {
+     "text": "1. The update is weight minus learning rate times gradient.",
+     "say": "One. The update is weight, minus learning rate, times gradient."
+    },
+    {
+     "text": "2. The learning rate sets the step size. Tune it carefully.",
+     "say": "Two. The learning rate sets the step size. Tune it carefully."
+    },
+    {
+     "text": "3. In practice, we use mini batches. That's stochastic gradient descent.",
+     "say": "Three. In practice, we use mini batches. That's stochastic gradient descent."
+    }
+   ]
+  },
+  {
+   "id": "summary",
+   "lines": [
+    {
+     "text": "Gradient descent: follow the slope downhill, one step at a time.",
+     "pause": 0.3
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "lines": [
+    "Follow for more AI concepts, explained visually.",
+    "And save this for your next interview."
+   ]
+  }
+ ],
+ "youtube": {
+  "title": "Gradient Descent Explained Visually #machinelearning #ai",
+  "description": "How does AI learn from its mistakes? Gradient descent: measure the loss, compute the gradient, and step the weights the opposite way — w = w − η · ∇L — again and again until the loss bottoms out.\n\nInside:\n- Why random weights need a loss function\n- The loss valley, the gradient (slope) and the update rule\n- Why steps shrink near the minimum\n- Learning rate: too big overshoots, too small crawls\n- A real example: fitting a line to house prices\n- Before vs after\n- 3 interview takeaways: the update rule, tuning the learning rate, mini-batch SGD\n\nFollow for more AI concepts, explained visually.\n\nNarration is AI-generated.\n#machinelearning #deeplearning #ai #gradientdescent #interviewprep",
+  "tags": [
+   "gradient descent",
+   "stochastic gradient descent",
+   "sgd",
+   "learning rate",
+   "loss function",
+   "machine learning",
+   "deep learning",
+   "neural networks",
+   "optimization",
+   "backpropagation",
+   "ai",
+   "interview prep"
+  ]
+ }
+}
