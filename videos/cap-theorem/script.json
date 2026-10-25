@@ -1,0 +1,177 @@
+{
+ "id": "cap-theorem",
+ "title": "CAP Theorem in Distributed Systems",
+ "voice": "af_heart",
+ "speed": 1.06,
+ "keywords": {
+  "red": [
+   "broke",
+   "down",
+   "refuses",
+   "error",
+   "fail",
+   "lost",
+   "stale",
+   "old"
+  ],
+  "green": [
+   "latest",
+   "converge",
+   "always",
+   "correct",
+   "accepted",
+   "merged",
+   "answering"
+  ],
+  "amber": [
+   "partition",
+   "partitions",
+   "choose",
+   "trade-off",
+   "latency"
+  ],
+  "cyan": [
+   "consistency",
+   "availability",
+   "node",
+   "nodes",
+   "east",
+   "west",
+   "read",
+   "write",
+   "cp",
+   "ap",
+   "dynamo",
+   "zookeeper",
+   "carts"
+  ]
+ },
+ "music": {
+  "tension": [
+   "hook",
+   "problem"
+  ],
+  "solutionFrom": "definition",
+  "lift": "summary"
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "lines": [
+    "Two database nodes. The link between them just broke.",
+    {
+     "text": "Do you return old data, or an error?",
+     "pause": 0.2
+    }
+   ]
+  },
+  {
+   "id": "problem",
+   "label": "THE PROBLEM",
+   "captions": true,
+   "lines": [
+    "A user saves a new value on the east node.",
+    "It should copy to the west node, but the network is down.",
+    "Then a read hits the west node. What should it answer?"
+   ]
+  },
+  {
+   "id": "definition",
+   "label": "THE THEOREM",
+   "lines": [
+    "That's the CAP theorem.",
+    "Consistency, availability, partition tolerance.",
+    {
+     "text": "When the network splits, pick consistency or availability.",
+     "pause": 0.2
+    }
+   ]
+  },
+  {
+   "id": "how",
+   "label": "HOW IT WORKS",
+   "captions": true,
+   "lines": [
+    "Consistency: every read sees the latest write, or fails.",
+    "Availability: every request gets an answer, even if stale.",
+    "Partition tolerance: it survives lost messages.",
+    {
+     "text": "Choose consistency: the west node refuses. That's CP.",
+     "pause": 0.15
+    },
+    {
+     "text": "Choose availability: it returns the old value. That's AP.",
+     "pause": 0.15
+    },
+    {
+     "text": "When the link heals, the nodes converge.",
+     "pause": 0.2
+    }
+   ]
+  },
+  {
+   "id": "example",
+   "label": "IN PRODUCTION",
+   "captions": true,
+   "lines": [
+    "Amazon's Dynamo chose AP for shopping carts.",
+    "Every add is accepted, and conflicts are merged later.",
+    {
+     "text": "ZooKeeper chose CP: the minority side rejects writes.",
+     "pause": 0.2
+    }
+   ]
+  },
+  {
+   "id": "compare",
+   "label": "CP vs AP",
+   "captions": true,
+   "lines": [
+    "CP: some requests fail, but you never read stale data.",
+    "AP: every node answers, and the data catches up later."
+   ]
+  },
+  {
+   "id": "takeaways",
+   "label": "INTERVIEW NOTES",
+   "lines": [
+    "Remember three things.",
+    "One. Partitions will happen, so the real choice is C or A.",
+    "Two. No partition? Then it's latency versus consistency.",
+    "Three. CAP consistency is not ACID consistency."
+   ]
+  },
+  {
+   "id": "summary",
+   "lines": [
+    {
+     "text": "CAP: when the network splits, pick correct data or constant uptime.",
+     "pause": 0.3
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "lines": [
+    "Follow for more system design, explained visually.",
+    "And save this for your next interview."
+   ]
+  }
+ ],
+ "youtube": {
+  "title": "CAP Theorem Explained Visually #systemdesign #distributedsystems",
+  "description": "Why can't a distributed system guarantee consistency, availability and partition tolerance all at once? When the network splits, every replica has to choose: refuse the request, or answer with possibly stale data.\n\nInside:\n- What happens to a read when two replicas lose their link\n- C, A and P, defined precisely\n- CP vs AP, step by step, and how nodes converge after the partition heals\n- Real systems: Amazon Dynamo's always-writeable cart (AP) and ZooKeeper (CP)\n- 3 interview takeaways: why \"pick 2 of 3\" is misleading, PACELC, and CAP vs ACID consistency\n\nFollow for more system design, explained visually.\n\nNarration is AI-generated.\n#systemdesign #distributedsystems #captheorem #backend #interviewprep",
+  "tags": [
+   "cap theorem",
+   "system design",
+   "distributed systems",
+   "consistency vs availability",
+   "network partition",
+   "cp vs ap",
+   "pacelc",
+   "databases",
+   "backend",
+   "interview prep"
+  ]
+ }
+}

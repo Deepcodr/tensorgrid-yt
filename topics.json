@@ -86,7 +86,11 @@
    "title": "CAP Theorem in Distributed Systems",
    "category": "system-design",
    "hook": "Why can't a distributed system guarantee consistency, availability, and partition tolerance all at once?",
-   "status": "queued"
+   "status": "scheduled",
+   "publishAt": "2026-11-16T19:00:00+05:30",
+   "metricoolPostId": 405445423,
+   "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7238339&openWithPostUuid=-8303647425324561573",
+   "durationSec": 87.1
   },
   {
    "id": "overfitting-vs-underfitting",
