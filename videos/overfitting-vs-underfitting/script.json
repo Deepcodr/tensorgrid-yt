@@ -1,0 +1,174 @@
+{
+ "id": "overfitting-vs-underfitting",
+ "title": "Overfitting vs Underfitting",
+ "voice": "af_heart",
+ "speed": 1.06,
+ "keywords": {
+  "red": [
+   "noise",
+   "wrong",
+   "off",
+   "fails",
+   "memorized",
+   "memorizes",
+   "overfitting",
+   "gap",
+   "climbing",
+   "high"
+  ],
+  "green": [
+   "pattern",
+   "generalizes",
+   "lowest",
+   "best",
+   "sweet",
+   "spot"
+  ],
+  "amber": [
+   "underfitting",
+   "simple",
+   "bias",
+   "variance",
+   "early",
+   "stopping"
+  ],
+  "cyan": [
+   "training",
+   "validation",
+   "model",
+   "complexity",
+   "epoch",
+   "points",
+   "data",
+   "error",
+   "loss"
+  ]
+ },
+ "music": {
+  "tension": [
+   "hook",
+   "problem"
+  ],
+  "solutionFrom": "definition",
+  "lift": "summary"
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "lines": [
+    "Why can a model ace training, then fail on new data?",
+    {
+     "text": "Because it memorized. It didn't learn.",
+     "pause": 0.2
+    }
+   ]
+  },
+  {
+   "id": "problem",
+   "label": "THE PROBLEM",
+   "captions": true,
+   "lines": [
+    "We train a model on examples, then use it on data it has never seen.",
+    "This model passes through every training point.",
+    "But real data has noise.",
+    "On new points, its predictions are way off."
+   ]
+  },
+  {
+   "id": "definition",
+   "label": "THE IDEA",
+   "lines": [
+    "That's overfitting: the model learns the noise, not the pattern.",
+    "Underfitting is the opposite: the model is too simple to catch the pattern.",
+    "We want the fit in between."
+   ]
+  },
+  {
+   "id": "how",
+   "label": "HOW IT WORKS",
+   "captions": true,
+   "lines": [
+    "Plot error against model complexity.",
+    "Training error keeps falling as the model grows.",
+    "Validation error falls too, then turns back up.",
+    "On the left, both are high: underfitting, or high bias.",
+    "On the right, the gap widens: overfitting, or high variance.",
+    "The sweet spot is where validation error is lowest."
+   ]
+  },
+  {
+   "id": "example",
+   "label": "IN PRODUCTION",
+   "captions": true,
+   "lines": [
+    "Say we train a fraud detector on card payments.",
+    "Every epoch, the training loss goes down.",
+    "Validation loss drops, then starts climbing after epoch twelve.",
+    "Early stopping keeps the model from its best epoch."
+   ]
+  },
+  {
+   "id": "compare",
+   "label": "BEFORE vs AFTER",
+   "captions": true,
+   "lines": [
+    "An overfit model looks perfect in training, then fails on real users.",
+    "A well fit model is validated, regularized, and stopped early, so it generalizes."
+   ]
+  },
+  {
+   "id": "takeaways",
+   "label": "INTERVIEW NOTES",
+   "lines": [
+    "Remember three things.",
+    {
+     "text": "1. Underfitting is high bias: bad on training and on new data.",
+     "say": "One. Underfitting is high bias: bad on training, and on new data."
+    },
+    {
+     "text": "2. Overfitting is high variance: great on training, bad on new data.",
+     "say": "Two. Overfitting is high variance: great on training, bad on new data."
+    },
+    {
+     "text": "3. Fight overfitting with more data, regularization, dropout, or early stopping.",
+     "say": "Three. Fight overfitting with more data, regularization, dropout, or early stopping."
+    }
+   ]
+  },
+  {
+   "id": "summary",
+   "lines": [
+    {
+     "text": "A good model learns the pattern, not the noise.",
+     "pause": 0.3
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "lines": [
+    "Follow for more AI concepts, explained visually.",
+    "And save this for your next interview."
+   ]
+  }
+ ],
+ "youtube": {
+  "title": "Overfitting vs Underfitting Explained Visually #machinelearning #ai",
+  "description": "Why can a model ace training, then fail on new data? Overfitting: the model memorizes the noise in its training data. Underfitting: the model is too simple to capture the pattern at all. The goal is a model that generalizes.\n\nInside:\n- Why a model that hits every training point can fail on new data\n- Underfit vs good fit vs overfit, side by side\n- Training vs validation error as model complexity grows (the U-curve)\n- Bias vs variance and the sweet spot\n- A real example: early stopping a fraud detector at its best epoch\n- Before vs after\n- 3 interview takeaways: high bias, high variance, and how to fight overfitting (more data, regularization, dropout, early stopping)\n\nFollow for more AI concepts, explained visually.\n\nNarration is AI-generated.\n#machinelearning #deeplearning #ai #datascience #interviewprep",
+  "tags": [
+   "overfitting",
+   "underfitting",
+   "overfitting vs underfitting",
+   "bias variance tradeoff",
+   "bias and variance",
+   "regularization",
+   "early stopping",
+   "dropout",
+   "generalization",
+   "machine learning",
+   "deep learning",
+   "ai",
+   "interview prep"
+  ]
+ }
+}

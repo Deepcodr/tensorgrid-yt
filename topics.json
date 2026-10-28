@@ -97,7 +97,11 @@
    "title": "Overfitting vs Underfitting in Machine Learning",
    "category": "ml",
    "hook": "Why can an AI model perform well during training but poorly on new data?",
-   "status": "queued"
+   "status": "scheduled",
+   "publishAt": "2026-11-19T19:00:00+05:30",
+   "metricoolPostId": 408565678,
+   "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7238339&openWithPostUuid=5251701955601451804",
+   "durationSec": 92.8
   },
   {
    "id": "docker-containers",
